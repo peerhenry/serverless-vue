@@ -13,7 +13,7 @@ const webAuth = new auth0.WebAuth({
 const localStorageKey = 'loggedIn'
 const loginEvent = 'loginEvent'
 
-class AUthService extends EventEmitter {
+class AuthService extends EventEmitter {
   idToken = null
   profile = null
   tokenExpiry = null
@@ -86,4 +86,4 @@ class AUthService extends EventEmitter {
   }
 }
 
-export default new AUthService()
+export default new AuthService()
