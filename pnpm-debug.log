@@ -1,0 +1,132 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": null
+  },
+  "1 debug pnpm": {
+    "isCaseSensitive": false,
+    "store": "C:\\Users\\peerh\\.pnpm-store\\2"
+  },
+  "2 debug pnpm:package-json": {
+    "initial": {
+      "name": "serverless-vue",
+      "version": "0.1.0",
+      "private": true,
+      "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "test:e2e": "vue-cli-service test:e2e",
+        "test:unit": "vue-cli-service test:unit"
+      },
+      "dependencies": {
+        "cache-loader": "^4.0.1",
+        "core-js": "^2.6.5",
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.3",
+        "vuex": "^3.0.1"
+      },
+      "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.9.0",
+        "@vue/cli-plugin-e2e-cypress": "^3.9.0",
+        "@vue/cli-plugin-eslint": "^3.9.0",
+        "@vue/cli-plugin-unit-jest": "^3.9.0",
+        "@vue/cli-service": "^3.9.0",
+        "@vue/eslint-config-prettier": "^4.0.1",
+        "@vue/test-utils": "1.0.0-beta.29",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-eslint": "^10.0.1",
+        "babel-jest": "^23.6.0",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.0.0",
+        "stylus": "^0.54.5",
+        "stylus-loader": "^3.0.2",
+        "vue-template-compiler": "^2.6.10"
+      }
+    },
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue",
+    "stage": "resolution_started"
+  },
+  "4 warn pnpm": {
+    "message": "Moving @vue/cli-plugin-babel that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "5 warn pnpm": {
+    "message": "Moving @vue/cli-plugin-e2e-cypress that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "6 warn pnpm": {
+    "message": "Moving @vue/cli-plugin-eslint that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "7 warn pnpm": {
+    "message": "Moving @vue/cli-plugin-unit-jest that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "8 warn pnpm": {
+    "message": "Moving @vue/cli-service that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "9 warn pnpm": {
+    "message": "Moving @vue/eslint-config-prettier that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "10 warn pnpm": {
+    "message": "Moving @vue/test-utils that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "11 warn pnpm": {
+    "message": "Moving babel-core that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "12 warn pnpm": {
+    "message": "Moving babel-eslint that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "13 warn pnpm": {
+    "message": "Moving babel-jest that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "14 warn pnpm": {
+    "message": "Moving eslint that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "15 warn pnpm": {
+    "message": "Moving eslint-plugin-vue that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "16 warn pnpm": {
+    "message": "Moving stylus that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "17 warn pnpm": {
+    "message": "Moving stylus-loader that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "18 warn pnpm": {
+    "message": "Moving vue-template-compiler that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "19 warn pnpm": {
+    "message": "Moving cache-loader that was installed by a different package manager to \"node_modules/.ignored",
+    "prefix": "C:\\dev\\js\\vue\\serverless-vue"
+  },
+  "20 error pnpm": {
+    "message": {
+      "errno": -4048,
+      "code": "EPERM",
+      "syscall": "rename",
+      "path": "C:\\dev\\js\\vue\\serverless-vue\\node_modules\\cache-loader",
+      "dest": "C:\\dev\\js\\vue\\serverless-vue\\node_modules\\.ignored\\cache-loader"
+    },
+    "err": {
+      "name": "Error",
+      "message": "EPERM: operation not permitted, rename 'C:\\dev\\js\\vue\\serverless-vue\\node_modules\\cache-loader' -> 'C:\\dev\\js\\vue\\serverless-vue\\node_modules\\.ignored\\cache-loader'",
+      "code": "EPERM",
+      "stack": "Error: EPERM: operation not permitted, rename 'C:\\dev\\js\\vue\\serverless-vue\\node_modules\\cache-loader' -> 'C:\\dev\\js\\vue\\serverless-vue\\node_modules\\.ignored\\cache-loader'"
+    }
+  }
+}
