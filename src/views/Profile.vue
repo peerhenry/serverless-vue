@@ -8,8 +8,11 @@ div(v-if="profile")
       p {{ profile.email }}
   .profile-json
     pre {{ JSON.stringify(profile, null, 2) }}
+  div
+    label What brand of car did you last drive?
+    MyInput(placeholder="car brand")
 div(v-else)
-  p No profile
+  p Profile not found. Please log in.
 </template>
 
 <script>
