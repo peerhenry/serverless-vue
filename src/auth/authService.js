@@ -1,22 +1,30 @@
 import auth0 from 'auth0-js'
 import EventEmitter from 'events'
-import authConfig from '../../auth_config.json'
+
+const isTest = process.env.NODE_ENV === 'test'
+const auth_domain = 'dev-xoxu0sy8.eu.auth0.com'
+const cliend_id = isTest
+  ? 'L6MT6oqC1vVpSijQibvbDJzQrUcEFyZw'
+  : 'xcG9E98vP0baX3S7pbGPhaFsqt72Ytpa'
 
 const webAuth = new auth0.WebAuth({
-  domain: authConfig.domain,
+  domain: auth_domain,
   redirectUri: `${window.location.origin}/auth-callback`,
-  clientID: authConfig.clientId,
+  clientID: cliend_id,
   responseType: 'id_token',
   scope: 'openid profile email',
 })
 
-const localStorageKey = 'loggedIn'
+console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+
+const localStorageLoggedInKey = 'loggedIn'
 const loginEvent = 'loginEvent'
 
 class AuthService extends EventEmitter {
   idToken = null
   profile = null
   tokenExpiry = null
+
   // Starts the user login flow
   login(customState) {
     webAuth.authorize({
@@ -31,6 +39,7 @@ class AuthService extends EventEmitter {
         if (err) {
           reject(err)
         } else {
+          console.log('authResult', authResult)
           this.localLogin(authResult)
           resolve(authResult.idToken)
         }
@@ -43,7 +52,7 @@ class AuthService extends EventEmitter {
     this.profile = authResult.idTokenPayload
     // Convert the JWT expiry time from seconds to milliseconds
     this.tokenExpiry = new Date(this.profile.exp * 1000)
-    localStorage.setItem(localStorageKey, 'true')
+    localStorage.setItem(localStorageLoggedInKey, 'true')
     this.emit(loginEvent, {
       loggedIn: true,
       profile: authResult.idTokenPayload,
@@ -53,7 +62,7 @@ class AuthService extends EventEmitter {
 
   renewTokens() {
     return new Promise((resolve, reject) => {
-      if (localStorage.getItem(localStorageKey) !== 'true') {
+      if (localStorage.getItem(localStorageLoggedInKey) !== 'true') {
         return reject('Not logged in')
       }
       webAuth.checkSession({}, (err, authResult) => {
@@ -68,7 +77,7 @@ class AuthService extends EventEmitter {
   }
 
   logOut() {
-    localStorage.removeItem(localStorageKey)
+    localStorage.removeItem(localStorageLoggedInKey)
     this.idToken = null
     this.tokenExpiry = null
     this.profile = null
@@ -81,7 +90,7 @@ class AuthService extends EventEmitter {
   isAuthenticated() {
     return (
       Date.now() < this.tokenExpiry &&
-      localStorage.getItem(localStorageKey) === 'true'
+      localStorage.getItem(localStorageLoggedInKey) === 'true'
     )
   }
 }

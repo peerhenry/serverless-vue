@@ -1,5 +1,8 @@
 # serverless-vue
 
+## 
+A Vue application, CI with CircleCI, deployed to Netlify [here](https://relaxed-swirles-11d15b.netlify.com/)
+
 ## Project setup
 ```
 npm install

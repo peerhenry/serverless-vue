@@ -1,3 +1,5 @@
+// followed: https://auth0.com/blog/end-to-end-testing-with-cypress-and-auth0/
+
 describe('login', () => {
   it('should successfully log into our app', () => {
     cy.login()
@@ -7,10 +9,19 @@ describe('login', () => {
         const auth0State = {
           nonce: '',
           state: 'some-random-state',
+          /*appState: {
+            target: '/profile',
+          },*/
         }
-        const callbackUrl = `/auth-callback#access_token=${access_token}&scope=openid&id_token=${id_token}&expires_in=${expires_in}&token_type=Bearer&state=${
-          auth0State.state
-        }`
+        const params = [
+          `access_token=${access_token}`,
+          'scope=openid',
+          `id_token=${id_token}`,
+          `expires_in=${expires_in}`,
+          'token_type=Bearer',
+          `state=${auth0State.state}`,
+        ].join('&')
+        const callbackUrl = `/auth-callback#${params}`
         cy.visit(callbackUrl, {
           onBeforeLoad(win) {
             win.document.cookie =

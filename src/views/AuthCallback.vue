@@ -1,12 +1,19 @@
 <template lang="pug">
 div
-  p loading...
+  p(v-if="loggedIn") logged in
+  p(v-else) loading...
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      loggedIn: false,
+    }
+  },
   methods: {
     handleLoginEvent(data) {
+      this.loggedIn = true
       this.$router.push(data.state.target || '/')
     },
   },
@@ -15,6 +22,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

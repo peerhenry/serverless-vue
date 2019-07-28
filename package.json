@@ -7,9 +7,11 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "cypress": "vue-cli-service test:e2e",
-    "cy": "vue-cli-service test:e2e --port 3050"
+    "test:e2e": "vue-cli-service test:e2e --mode test",
+    "cypress": "vue-cli-service test:e2e --mode test",
+    "cy": "vue-cli-service test:e2e --port 3050 --mode test",
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions"
   },
   "dependencies": {
     "auth0-js": "^9.11.1",

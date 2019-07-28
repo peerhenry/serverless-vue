@@ -45,3 +45,33 @@ Cypress.Commands.add('login', (overrides = {}) => {
   }
   cy.request(options)
 })
+
+Cypress.Commands.add('loginTo', target => {
+  cy.login()
+    .then(resp => resp.body)
+    .then(body => {
+      const { access_token, expires_in, id_token } = body
+      const auth0State = {
+        nonce: '',
+        state: 'some-random-state',
+        appState: {
+          target: target,
+        },
+      }
+      const params = [
+        `access_token=${access_token}`,
+        'scope=openid',
+        `id_token=${id_token}`,
+        `expires_in=${expires_in}`,
+        'token_type=Bearer',
+        `state=${auth0State.state}`,
+      ].join('&')
+      const callbackUrl = `/auth-callback#${params}`
+      cy.visit(callbackUrl, {
+        onBeforeLoad(win) {
+          win.document.cookie =
+            'com.auth0.auth.some-random-state=' + JSON.stringify(auth0State)
+        },
+      })
+    })
+})

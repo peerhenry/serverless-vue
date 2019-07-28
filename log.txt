@@ -1,7 +1,9 @@
 
-- setup CD to netlify
+- setup CD to netlify, develop & master branch. master branch gets deployed to netlify
 
 - setup Auth0 so it works locally
 
 - fix routing on netlify
 https://medium.com/@lpellis/deploying-vue-with-netlify-from-scratch-28b6c2249081
+
+- setup CI with CircleCI
