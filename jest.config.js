@@ -4,11 +4,12 @@ module.exports = {
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$':
       'jest-transform-stub',
-    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
   },
   transformIgnorePatterns: ['/node_modules/'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^ASSETS/(.*)$': '<rootDir>/src/assets/$1',
   },
   snapshotSerializers: ['jest-serializer-vue'],
   testMatch: [
