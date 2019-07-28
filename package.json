@@ -6,8 +6,10 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "test": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "test": "vue-cli-service test:unit"
+    "cypress": "vue-cli-service test:e2e",
+    "cy": "vue-cli-service test:e2e --port 3050"
   },
   "dependencies": {
     "auth0-js": "^9.11.1",

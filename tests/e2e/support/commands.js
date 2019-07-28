@@ -24,6 +24,7 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+// eslint-disable-next-line no-unused-vars
 Cypress.Commands.add('login', (overrides = {}) => {
   Cypress.log({
     name: 'loginViaAuth0',

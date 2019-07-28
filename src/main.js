@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './setup/router.js'
+import router from './router.js'
 import store from './setup/store.js'
 import './setup/auth.js'
 import './setup/logging.js'

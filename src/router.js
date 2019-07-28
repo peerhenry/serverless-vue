@@ -44,6 +44,7 @@ function routeShouldSkipAuthentication(route) {
 }
 
 router.beforeEach((to, _from, next) => {
+  console.log('auth.isAuthenticated()', auth.isAuthenticated())
   if (routeShouldSkipAuthentication(to) || auth.isAuthenticated()) {
     return next()
   }

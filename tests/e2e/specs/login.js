@@ -1,11 +1,4 @@
-describe('Profile page', () => {
-  /*it('should not be availble if the user is not logged in', () => {
-    cy.visit('/profile')
-    cy.location().should(loc => {
-      expect(loc.origin).to.eq('https://dev-xoxu0sy8.eu.auth0.com')
-    })
-  })*/
-
+describe('login', () => {
   it('should successfully log into our app', () => {
     cy.login()
       .then(resp => resp.body)
@@ -26,8 +19,4 @@ describe('Profile page', () => {
         })
       })
   })
-  /*
-  it('should be visible after login', () => {
-    cy.visit('/profile')
-  })*/
 })
