@@ -27,6 +27,18 @@ const router = new Router({
         import(/* webpackChunkName: "profile" */ '@/views/Profile.vue'),
     },
     {
+      path: '/dossiers',
+      name: 'dossiers',
+      component: () =>
+        import(/* webpackChunkName: "dossiers" */ '@/views/Dossiers.vue'),
+    },
+    {
+      path: '/people',
+      name: 'people',
+      component: () =>
+        import(/* webpackChunkName: "people" */ '@/views/People.vue'),
+    },
+    {
       path: '/auth-callback',
       name: 'auth-callback',
       component: () =>

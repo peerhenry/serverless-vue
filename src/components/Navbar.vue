@@ -2,6 +2,8 @@
 #nav
   router-link(to="/") Home
   router-link(to="/about") About
+  router-link(v-if="isLoggedIn" to="/dossiers") Dossiers
+  router-link(v-if="isLoggedIn" to="/people") People
   router-link(v-if="isLoggedIn" to="/profile") Profile
   a(v-if="!isLoggedIn" href="#" @click.prevent="login") Login
   a(v-if="isLoggedIn" href="#" @click.prevent="logout") Log out
