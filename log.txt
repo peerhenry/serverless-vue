@@ -6,4 +6,8 @@
 - fix routing on netlify
 https://medium.com/@lpellis/deploying-vue-with-netlify-from-scratch-28b6c2249081
 
+- use concurrently to run lambda function & vue app
+
 - setup CI with CircleCI
+
+- vue add apollo

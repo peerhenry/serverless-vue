@@ -1,0 +1,6 @@
+query {
+  dossier {
+    title
+    description
+  }
+}

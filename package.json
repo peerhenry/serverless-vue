@@ -11,17 +11,22 @@
     "cypress": "vue-cli-service test:e2e --mode test",
     "cy": "vue-cli-service test:e2e --port 3050 --mode test",
     "lambda-serve": "netlify-lambda serve functions",
-    "lambda-build": "netlify-lambda build functions"
+    "lambda-build": "netlify-lambda build functions",
+    "dev": "concurrently --kill-others \"npm run lambda-serve\" \"npm run serve\"",
+    "ap": "npm run vue-cli-plugin-apollo"
   },
   "dependencies": {
+    "apollo-server-lambda": "^2.8.1",
     "auth0-js": "^9.11.1",
     "cache-loader": "^4.0.1",
     "core-js": "^2.6.5",
+    "graphql": "^14.4.2",
     "netlify-lambda": "^1.5.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuejs-logger": "1.5.3",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "ws": "^7.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
@@ -34,6 +39,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "concurrently": "^4.1.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.12.0",
@@ -42,6 +48,7 @@
     "stylint": "^2.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-apollo": "^0.21.0",
     "vue-cli-plugin-pug": "^1.0.7",
     "vue-template-compiler": "^2.6.10"
   }
