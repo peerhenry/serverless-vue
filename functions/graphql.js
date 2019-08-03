@@ -45,4 +45,10 @@ const server = new ApolloServer({
   introspection: true, // problem: process.env.NODE_ENV is always production
 })
 
-exports.handler = server.createHandler()
+exports.handler = server.createHandler({
+  cors: {
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT'],
+    // credentials: true,
+  },
+})

@@ -10,9 +10,6 @@ import Navbar from '@/components/Navbar.vue'
 export default {
   name: 'App',
   components: { Navbar },
-  mounted() {
-    console.log('do we have apollo?', this.$apollo)
-  },
 }
 </script>
 

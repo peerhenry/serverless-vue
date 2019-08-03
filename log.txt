@@ -11,3 +11,6 @@ https://medium.com/@lpellis/deploying-vue-with-netlify-from-scratch-28b6c2249081
 - setup CI with CircleCI
 
 - vue add apollo
+cant get this to work
+import { createApolloClient } from 'vue-cli-plugin-apollo/graphql-client'
+installing apollo-boost and using that instead works!
