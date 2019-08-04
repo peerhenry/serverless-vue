@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build:vue",
+    "build": "vue-cli-service build",
     "build:all": "npm run build  && npm run lambda-build",
     "test": "vue-cli-service test:unit",
     "lint": "npm run lint:js && npm run lint:gql",
