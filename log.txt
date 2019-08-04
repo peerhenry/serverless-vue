@@ -14,3 +14,12 @@ https://medium.com/@lpellis/deploying-vue-with-netlify-from-scratch-28b6c2249081
 cant get this to work
 import { createApolloClient } from 'vue-cli-plugin-apollo/graphql-client'
 installing apollo-boost and using that instead works!
+
+- graphql linting
+todo: write required steps
+
+- graphql intellisense
+todo
+
+- graphql schema loading in netlify functions
+had to extend webpack.config.js and pass it in with '-c' flag

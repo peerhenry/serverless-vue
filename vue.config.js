@@ -6,6 +6,7 @@ const webpackConfig = {
       ASSETS: path.resolve(__dirname, 'src/assets/'),
     },
   },
+  devtool: 'source-map',
 }
 
 module.exports = {
