@@ -39,7 +39,6 @@ class AuthService extends EventEmitter {
         if (err) {
           reject(err)
         } else {
-          console.log('authResult', authResult)
           this.localLogin(authResult)
           resolve(authResult.idToken)
         }
