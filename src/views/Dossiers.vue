@@ -7,17 +7,12 @@ div
 </template>
 
 <script>
-import dossiersQuery from '@/graphql/Dossiers.gql'
+import getDossiers from '@/graphql/GetDossiers.gql'
 
 export default {
   name: 'Dossiers',
-  // data() {
-  //   return {
-  //     dossiers: [],
-  //   }
-  // },
   apollo: {
-    dossiers: dossiersQuery,
+    dossiers: getDossiers,
   },
 }
 </script>
