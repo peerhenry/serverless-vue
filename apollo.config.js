@@ -12,12 +12,12 @@ module.exports = {
     // service: env.VUE_APP_APOLLO_ENGINE_SERVICE,
     service: 'my-service-name',
     includes: ['src/**/*.{js,jsx,ts,tsx,vue,gql}'],
-    localSchemaFile: path.resolve(__dirname, './schema.graphql'),
+    localSchemaFile: path.resolve(__dirname, './src/schema.graphql'),
   },
   service: {
     // name: env.VUE_APP_APOLLO_ENGINE_SERVICE,
     name: 'my-service-name',
-    localSchemaFile: path.resolve(__dirname, './schema.graphql'),
+    localSchemaFile: path.resolve(__dirname, './src/schema.graphql'),
   },
   /*engine: {
     endpoint: process.env.APOLLO_ENGINE_API_ENDPOINT,
