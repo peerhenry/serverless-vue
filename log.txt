@@ -23,3 +23,5 @@ todo
 
 - graphql schema loading in netlify functions
 had to extend webpack.config.js and pass it in with '-c' flag
+
+I broke graphql lambda function deployment, it says "encoding" is missing, so lets try installing it.

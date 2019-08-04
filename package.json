@@ -24,6 +24,7 @@
     "auth0-js": "^9.11.1",
     "cache-loader": "^4.0.1",
     "core-js": "^2.6.5",
+    "encoding": "^0.1.12",
     "graphql": "^14.4.2",
     "netlify-lambda": "^1.5.1",
     "vue": "^2.6.10",
