@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "serverless-vue": {
+      "schemaPath": "schema.graphql"
+    }
+  }
+}

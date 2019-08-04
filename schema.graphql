@@ -1,0 +1,11 @@
+type Dossier {
+  id: Int!
+  title: String
+  description: String
+}
+
+type Query {
+  hello: String
+  dossiers: [Dossier]
+  dossier(id: Int!): Dossier
+}

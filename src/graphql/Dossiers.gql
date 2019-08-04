@@ -1,4 +1,4 @@
-query {
+query GetDossiers {
   dossiers {
     title
     description

@@ -4,15 +4,19 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npm run build:vue && npm run lambda-build",
+    "build:vue": "vue-cli-service build",
     "test": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
+    "lint": "npm run lint:js && npm run lint:gql",
+    "lint:js": "vue-cli-service lint",
+    "lint:gql": "eslint src --ext .gql --ext .graphql",
     "cy": "vue-cli-service test:e2e --port 3050 --mode test",
     "cypress": "vue-cli-service test:e2e --mode test",
     "dev": "concurrently --kill-others \"npm run lambda-serve\" \"npm run serve\"",
     "lambda-build": "netlify-lambda build functions",
     "lambda-serve": "netlify-lambda serve functions",
-    "test:e2e": "vue-cli-service test:e2e --mode test"
+    "test:e2e": "vue-cli-service test:e2e --mode test",
+    "shebang": "npm run build && npm run lint && npm run test && npm run cypress"
   },
   "dependencies": {
     "apollo-boost": "^0.4.3",
@@ -42,6 +46,7 @@
     "babel-jest": "^23.6.0",
     "concurrently": "^4.1.1",
     "eslint": "^5.16.0",
+    "eslint-plugin-graphql": "^3.0.3",
     "eslint-plugin-vue": "^5.0.0",
     "graphql-tag": "^2.9.0",
     "node-sass": "^4.12.0",

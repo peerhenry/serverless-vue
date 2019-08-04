@@ -1,0 +1,16 @@
+
+
+Things to use:
+
+1. vue-apollo
+
+2. apollo-server-lambda
+
+3. eslint-plugin-graphql
+- eslintrc.js
+- .graphqlconfig
+
+4 apollo graphql vscode extension
+- apollo.config.js
+- engine.apollographql.com
+- .env (git ignored)

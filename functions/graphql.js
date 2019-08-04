@@ -1,18 +1,5 @@
-const { ApolloServer, gql } = require('apollo-server-lambda')
-
-// schema
-const typeDefs = gql`
-  type Dossier {
-    id: Int!
-    title: String
-    description: String
-  }
-  type Query {
-    hello: String
-    dossiers: [Dossier]
-    dossier(id: Int!): Dossier
-  }
-`
+const { ApolloServer } = require('apollo-server-lambda')
+const typeDefs = require('../schema.graphql')
 
 const dossiers = [
   {
